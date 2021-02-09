@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "env-cmd -f ./.env.development gatsby develop",
+    "develop": "env-cmd .env.development develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -23,8 +23,5 @@
     "gatsby-transformer-sharp": "^2.12.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
-    "env-cmd": "^10.1.0"
   }
 }
