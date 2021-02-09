@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'my-website',
   },
+  pathPrefix: '/my-website/',
+
   plugins: [
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
