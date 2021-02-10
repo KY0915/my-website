@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-post-template-js","path":"/post/my-first-post","result":{"data":{"markdownRemark":{"frontmatter":{"title":"Awesome Blog Post Title","date":"2021-02-09T00:00:00.000Z"},"html":"<h2>Introduction to my blog post</h2>\n<p>Great content of my first blog</p>"}},"pageContext":{"slug":"my-first-post"}},"staticQueryHashes":[]}
