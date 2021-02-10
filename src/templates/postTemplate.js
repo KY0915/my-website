@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
-
+import TableOfContents from '../components/tableOfContents';
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -9,17 +9,20 @@ export const query = graphql`
         title
         date
       }
+      tableOfContents(absolute: false)
       html
     }
   }
 `;
 const PostPage = (props) => {
+  const textToRepace = props.data.markdownRemark.html;
+  const toc = props.data.markdownRemark.tableOfContents;
+  console.log(toc);
+  const content = textToRepace.replace('TOC', toc);
   return (
     <Layout>
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      ></div>
+      <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </Layout>
   );
 };

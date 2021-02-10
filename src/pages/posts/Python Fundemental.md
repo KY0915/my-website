@@ -6,8 +6,7 @@ author: Kyuho Yi
 
 # Table of Contents
 
-- TOC
-  {:toc}
+TOC
 
 # Overview
 
