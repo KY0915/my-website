@@ -33,6 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   console.log(res);
   res.data.blog.posts.forEach((post) => {
+    console.log(post.fields.slug);
     createPage({
       component: postTemplate,
       path: `/post/${post.fields.slug}`,

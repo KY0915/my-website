@@ -4,11 +4,17 @@ import Layout from '../components/layout';
 export default function Home() {
   return (
     <Layout>
-      <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
-      <p>
-        What do I like to do? Lots of course but definitely enjoy building
-        websites.
-      </p>
+      <div>
+        <h1>Software Engineer @ TIAA </h1>
+        <p>I am interested in building a machine learning infrastructure.</p>
+        <ul>
+          <li>Machine Learning</li>
+          <li>Infrastructure &amp; Platform </li>
+          <li>Finance</li>
+          <li>Data Intensive Applications</li>
+        </ul>
+      </div>
+      <div></div>
     </Layout>
   );
 }

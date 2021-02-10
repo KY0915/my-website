@@ -1,9 +1,7 @@
 ---
-published: true
 title: Python Fundamentals - Sequences
-use_math: false
-category: dev
-layout: default
+date: 2021-02-09
+author: Kyuho Yi
 ---
 
 # Table of Contents
