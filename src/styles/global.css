@@ -1,7 +1,11 @@
 html {
-  background-color: whitesmoke;
+  background-color: white;
 }
 
+blockquote {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+}
 body {
   font-family: roboto;
   margin: 0;

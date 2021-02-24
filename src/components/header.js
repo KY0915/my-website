@@ -4,7 +4,6 @@ import React from 'react';
 const ListLink = (props) => (
   <li style={{ display: `inline-block`, marginRight: `2rem` }}>
     <Link
-      hoveredStyle={{ textDecoration: 'underline' }}
       activeStyle={{ textDecoration: 'underline' }}
       className="noselect nounderscore white-font"
       to={props.to}
