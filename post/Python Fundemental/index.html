@@ -1,9 +1,124 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/my-website/styles.86437a0493703bb1e232.css" id="gatsby-global-css">html{background-color:#f5f5f5}body{font-family:roboto;margin:0}.noselect{-webkit-touch-callout:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.white-font{color:#f5f5f5}.nounderscore{text-decoration:none}.underscore{text-decoration:underline}h2,small{color:#000}.onHover:hover{text-decoration:underline}.container-module--container--1stMa{margin:3rem auto;max-width:650px;padding:0 1rem}</style><meta name="generator" content="Gatsby 2.32.3"/><link as="script" rel="preload" href="/my-website/webpack-runtime-6e326d7625c6554f2fa6.js"/><link as="script" rel="preload" href="/my-website/framework-6c3ead24af170cdcb87c.js"/><link as="script" rel="preload" href="/my-website/app-38b5f03dc62c53366d39.js"/><link as="script" rel="preload" href="/my-website/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/my-website/component---src-templates-post-template-js-50e27a0549ea83cc010e.js"/><link as="fetch" rel="preload" href="/my-website/page-data\post\Python Fundemental\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/my-website/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header style="background:black;text-align:center"><div style="margin:0 auto;padding:1.45rem 1.0875rem;display:flex;justify-items:center;align-items:center"><h1 style="margin:0;flex:1"><a style="color:white;text-decoration:none" href="/my-website/">Kyuho Yi</a></h1><ul class="noselect nounderscore white-font" style="justify-content:center;display:flex;flex:1;list-style-type:none;font-family:roboto;font-size:1.5rem"><li style="display:inline-block;margin-right:2rem"><a hoveredStyle="[object Object]" class="noselect nounderscore white-font" href="/my-website/">Home</a></li><li style="display:inline-block;margin-right:2rem"><a hoveredStyle="[object Object]" class="noselect nounderscore white-font" href="/my-website/post/">Post</a></li><li style="display:inline-block;margin-right:2rem"><a hoveredStyle="[object Object]" class="noselect nounderscore white-font" href="/my-website/project/">Project</a></li><li style="display:inline-block;margin-right:2rem"><a hoveredStyle="[object Object]" class="noselect nounderscore white-font" href="/my-website/about/">About</a></li></ul></div></header><div class="container-module--container--1stMa"><h1>Python Fundamentals - Sequences</h1><div><h1>Table of Contents</h1>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/my-website/styles.854eeceadf4a782aaa45.css" id="gatsby-global-css">html{background-color:#fff}blockquote{background-color:#f6f6f6;padding:1rem 2rem}body{font-family:roboto;margin:0}.noselect{-webkit-touch-callout:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.white-font{color:#f5f5f5}.nounderscore{text-decoration:none}.underscore{text-decoration:underline}h2,small{color:#000}.onHover:hover{text-decoration:underline}.container-module--container--1stMa{margin:3rem auto;max-width:650px;padding:0 1rem}</style><meta name="generator" content="Gatsby 2.32.3"/><style type="text/css">
+    .anchor-header.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor-header.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor-header svg,
+    h2 .anchor-header svg,
+    h3 .anchor-header svg,
+    h4 .anchor-header svg,
+    h5 .anchor-header svg,
+    h6 .anchor-header svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor-header svg,
+    h2:hover .anchor-header svg,
+    h3:hover .anchor-header svg,
+    h4:hover .anchor-header svg,
+    h5:hover .anchor-header svg,
+    h6:hover .anchor-header svg,
+    h1 .anchor-header:focus svg,
+    h2 .anchor-header:focus svg,
+    h3 .anchor-header:focus svg,
+    h4 .anchor-header:focus svg,
+    h5 .anchor-header:focus svg,
+    h6 .anchor-header:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link as="script" rel="preload" href="/my-website/webpack-runtime-fef568e355a87cf74a2c.js"/><link as="script" rel="preload" href="/my-website/framework-6c3ead24af170cdcb87c.js"/><link as="script" rel="preload" href="/my-website/app-5405a11b6cddead427e8.js"/><link as="script" rel="preload" href="/my-website/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/my-website/component---src-templates-post-template-js-a3433237fa12cc5ce65a.js"/><link as="fetch" rel="preload" href="/my-website/page-data\post\Python Fundemental\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/my-website/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header style="background:black;text-align:center"><div style="margin:0 auto;padding:1.45rem 1.0875rem;display:flex;justify-items:center;align-items:center"><h1 style="margin:0;flex:1"><a style="color:white;text-decoration:none" href="/my-website/">Kyuho Yi</a></h1><ul class="noselect nounderscore white-font" style="justify-content:center;display:flex;flex:1;list-style-type:none;font-family:roboto;font-size:1.5rem"><li style="display:inline-block;margin-right:2rem"><a class="noselect nounderscore white-font" href="/my-website/">Home</a></li><li style="display:inline-block;margin-right:2rem"><a class="noselect nounderscore white-font" href="/my-website/post/">Post</a></li><li style="display:inline-block;margin-right:2rem"><a class="noselect nounderscore white-font" href="/my-website/project/">Project</a></li><li style="display:inline-block;margin-right:2rem"><a class="noselect nounderscore white-font" href="/my-website/about/">About</a></li></ul></div></header><div class="container-module--container--1stMa"><h1>Python Fundamentals - Sequences</h1><div><h1 id="table-of-contents" style="position:relative;"><a href="#table-of-contents" aria-label="table of contents permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table of Contents</h1>
+<p><ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li>
+<p><a href="#overview">Overview</a></p>
 <ul>
-<li>TOC
-{:toc}</li>
+<li>
+<ul>
+<li><a href="#cartesian-products">Cartesian Products</a></li>
+<li><a href="#restricted-listcomp">Restricted listcomp</a></li>
 </ul>
-<h1>Overview</h1>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#list--tuples--generic-sequences">List &#x26; Tuples &#x26; Generic Sequences</a></p>
+<ul>
+<li><a href="#generator-expressions-genexp">Generator Expressions (genexp)</a></li>
+<li>
+<p><a href="#tuple"><code>tuple</code></a></p>
+<ul>
+<li><a href="#namedtuple"><code>namedtuple</code></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#advanced-slicing">Advanced Slicing</a></p>
+<ul>
+<li>
+<p><a href="#slice-assignment">Slice Assignment</a></p>
+<ul>
+<li><a href="#add">Add</a></li>
+<li><a href="#delete">Delete</a></li>
+</ul>
+</li>
+<li><a href="#no-more-magic---readable-slices">No More Magic - Readable Slices</a></li>
+<li><a href="#multi-argument-slices---how">Multi-Argument Slices - How?</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#--operators-with-sequences"><code>+, *</code> Operators With Sequences</a></p>
+<ul>
+<li><a href="#reference-issues-with-">Reference Issues with <code>*</code></a></li>
+<li><a href="#__iadd__-and-__imul__-with-immutable-objects"><code>__iadd__</code> and <code>__imul__</code> With Immutable Objects</a></li>
+<li><a href="#weirdest-corner-case">Weirdest Corner Case</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#bisect-for-sorted-sequences"><code>bisect</code> For Sorted Sequences</a></p>
+<ul>
+<li><a href="#searching-using-bisect">Searching Using <code>bisect()</code></a></li>
+<li><a href="#inserting-using-insort">Inserting Using <code>insort()</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#homogenous-array-types">Homogenous Array Types</a></p>
+<ul>
+<li><a href="#array"><code>array</code></a></li>
+<li><a href="#memoryview"><code>memoryview</code></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#deques--queues">Deques &#x26; Queues</a></p>
+<ul>
+<li><a href="#deque"><code>deque</code></a></li>
+<li><a href="#different-queues">Different Queues</a></li>
+</ul>
+</li>
+</ul></p>
+<h1 id="overview" style="position:relative;"><a href="#overview" aria-label="overview permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h1>
 <p>In python's standard library, we have the following sequence types:</p>
 <ul>
 <li><code>list</code>. Heterogenous and mutable.</li>
@@ -17,21 +132,21 @@
 </ul>
 <p>A data structure is <strong>flat/heterogenous</strong> if it can only hold the same type or hold different types, and is <strong>mutable/immutable</strong> if its contents can be modified.</p>
 <p>Listcomps are fairly simple, so I will just give a few examples of them here before we jump to genexps.</p>
-<h3>Cartesian Products</h3>
+<h3 id="cartesian-products" style="position:relative;"><a href="#cartesian-products" aria-label="cartesian products permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cartesian Products</h3>
 <pre><code class="language-python">>>> letters = ['a','b','c']
 >>> numbers = [1,2,3]
 >>> product = [(letter, number) for letter in letters for number in numbers]
 >>> product
 [('a', 1), ('a', 2), ('a', 3), ('b', 1), ('b', 2), ('b', 3), ('c', 1), ('c', 2), ('c', 3)]
 </code></pre>
-<h3>Restricted listcomp</h3>
+<h3 id="restricted-listcomp" style="position:relative;"><a href="#restricted-listcomp" aria-label="restricted listcomp permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Restricted listcomp</h3>
 <pre><code class="language-python">>>> letters = ['a','b','c']
 >>> filtered_letters = [letter for letter in letters if letter != 'c']
 >>> filtered_letters
 ['a', 'b']
 </code></pre>
-<h1>List &#x26; Tuples &#x26; Generic Sequences</h1>
-<h2>Generator Expressions (genexp)</h2>
+<h1 id="list--tuples--generic-sequences" style="position:relative;"><a href="#list--tuples--generic-sequences" aria-label="list  tuples  generic sequences permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List &#x26; Tuples &#x26; Generic Sequences</h1>
+<h2 id="generator-expressions-genexp" style="position:relative;"><a href="#generator-expressions-genexp" aria-label="generator expressions genexp permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generator Expressions (genexp)</h2>
 <p>Generator expressions can be done to save space in the case that an entire list is not needed. We replace listcomp with genexp in the above cartesian product example:</p>
 <pre><code class="language-python">>>> letters = ['a','b','c']
 >>> numbers = [1,2,3]
@@ -49,7 +164,7 @@ c 2
 c 3
 </code></pre>
 <p>Here, we did not create a cartesian product list and scan it to print. This is clearly more efficient.</p>
-<h2><code>tuple</code></h2>
+<h2 id="tuple" style="position:relative;"><a href="#tuple" aria-label="tuple permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>tuple</code></h2>
 <p>Tuples are immutable lists which serve as records with no field names. In particular, the position of the item in the tuple may have a semantic meaning. We unpack a tuple like so:</p>
 <pre><code class="language-python">>>> coordinates = (1,2)
 >>> _, longitude = coordinates
@@ -72,7 +187,7 @@ c 3
 >>> z
 [3, 4, 5, 6, 7]
 </code></pre>
-<h3><code>namedtuple</code></h3>
+<h3 id="namedtuple" style="position:relative;"><a href="#namedtuple" aria-label="namedtuple permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>namedtuple</code></h3>
 <p><code>namedtuple</code>s are a part of the <code>collections</code> package which basically, as the name implies, have names to each field. Just as we create tuples as nameless records, we have <code>namedtuples</code> for records with names. These should be used more often:</p>
 <pre><code class="language-python">>>> from collections import namedtuple
 >>> Snek = namedtuple('Snake', ['name', 'length'])
@@ -85,22 +200,22 @@ Snake(name='anaconda', length='4.511')
 >>> py[1]
 '3.7'
 </code></pre>
-<h2>Advanced Slicing</h2>
-<h3>Slice Assignment</h3>
+<h2 id="advanced-slicing" style="position:relative;"><a href="#advanced-slicing" aria-label="advanced slicing permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced Slicing</h2>
+<h3 id="slice-assignment" style="position:relative;"><a href="#slice-assignment" aria-label="slice assignment permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Slice Assignment</h3>
 <p>You can modify portions of a <strong>mutable</strong> sequence using slice, i.e. add, delete, etc:</p>
-<h4>Add</h4>
+<h4 id="add" style="position:relative;"><a href="#add" aria-label="add permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add</h4>
 <pre><code class="language-python">>>> l = [1,2,3]
 >>> l[1:1] = ['a','b','c']
 >>> l
 [1, 'a', 'b', 'c', 2, 3]
 </code></pre>
-<h4>Delete</h4>
+<h4 id="delete" style="position:relative;"><a href="#delete" aria-label="delete permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete</h4>
 <pre><code class="language-python">>>> l = [1,2,3]
 >>> del l[1:]
 >>> l
 [1]
 </code></pre>
-<h3>No More Magic - Readable Slices</h3>
+<h3 id="no-more-magic---readable-slices" style="position:relative;"><a href="#no-more-magic---readable-slices" aria-label="no more magic   readable slices permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>No More Magic - Readable Slices</h3>
 <p>When you call <code>seq[start:stop:step]</code>, python calls <code>seq.__getitem__(slice(start, stop, step))</code>, where <code>slice</code> is actually an object. Thus, you can actually create <strong>named constant slices</strong> for better readability, like so:</p>
 <pre><code class="language-python">>>> NAME = slice(0,4)
 >>> FIRST = slice(4,10)
@@ -114,14 +229,14 @@ Name: a, First: 123, Last: 456
 Name: b, First: 23, Last: 4567
 </code></pre>
 <p>This makes your functions less "magic" and more readable for future developers.</p>
-<h3>Multi-Argument Slices - How?</h3>
+<h3 id="multi-argument-slices---how" style="position:relative;"><a href="#multi-argument-slices---how" aria-label="multi argument slices   how permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multi-Argument Slices - How?</h3>
 <p>When you use <code>numpy</code>'s multidimensional array class, <code>np.ndarray</code>, how does it handle multiple arguments?</p>
 <p>When you call <code>a[i,j]</code>, you are actually calling <code>a.__getitem__((i, j))</code>, so that the arguments inside of <code>[]</code> is packaged as a tuple. <code>numpy</code> defined custom <code>__getitem__</code> so it can accept tuples like above, unlike built-in types.</p>
 <p>When you use <code>a[i, ...]</code>, it is another multi-argument slice, equivalent to <code>a[i, :, :, :]</code> if it was a 4-dimensional matrix. The <code>...</code> is considered a special keyword, an alias to <code>Ellipsis</code> object, from the <code>ellipsis</code> class. Think of <code>Ellipsis</code> as <code>True</code> or <code>False</code>, and its class <code>ellipsis</code> like <code>bool</code>.</p>
-<h2><code>+, *</code> Operators With Sequences</h2>
-<h3>Reference Issues with <code>*</code></h3>
+<h2 id="--operators-with-sequences" style="position:relative;"><a href="#--operators-with-sequences" aria-label="  operators with sequences permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>+, *</code> Operators With Sequences</h2>
+<h3 id="reference-issues-with-" style="position:relative;"><a href="#reference-issues-with-" aria-label="reference issues with  permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference Issues with <code>*</code></h3>
 <p><strong>Never do this:</strong> <code>[[]] * 3</code>. When you evaluate it at first, you'll see <code>[[],[],[]]</code>. Innocent looking enough, but they are references to the same list. <strong>Do this instead:</strong> <code>[[] for _ in range(3)]</code>, so that each object is constructed individually.</p>
-<h3><code>__iadd__</code> and <code>__imul__</code> With Immutable Objects</h3>
+<h3 id="__iadd__-and-__imul__-with-immutable-objects" style="position:relative;"><a href="#__iadd__-and-__imul__-with-immutable-objects" aria-label="__iadd__ and __imul__ with immutable objects permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>__iadd__</code> and <code>__imul__</code> With Immutable Objects</h3>
 <p>When you try to augment a sequence using <code>+=</code> or <code>*=</code>, it invokes the magic functions <code>__iadd__</code> and <code>__imul__</code>. If the object does not have these functions, it falls back to <code>__add__</code> and <code>__mul__</code>. For immutable objects like tuples, this sometimes spells trouble:</p>
 <pre><code class="language-python">>>> l = (1,2,3)
 >>> id(l)
@@ -133,7 +248,7 @@ Name: b, First: 23, Last: 4567
 4510680840
 </code></pre>
 <p><strong>These are not the same objects.</strong> What's happening underneath the hood is equivalent to <code>l = l + (4,5,6)</code>, which means we created a new tuple! <strong>To be precise, the tuple container is replaced while the references to objects inside are the same before and after.</strong></p>
-<h3>Weirdest Corner Case</h3>
+<h3 id="weirdest-corner-case" style="position:relative;"><a href="#weirdest-corner-case" aria-label="weirdest corner case permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Weirdest Corner Case</h3>
 <pre><code class="language-python">>>> t = ([],)
 >>> t[0] += [1]
 Traceback (most recent call last):
@@ -153,8 +268,8 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 </code></pre>
 <p>You can also disassemble python code and view the bytecode to see a similar process.</p>
-<h2><code>bisect</code> For Sorted Sequences</h2>
-<h3>Searching Using <code>bisect()</code></h3>
+<h2 id="bisect-for-sorted-sequences" style="position:relative;"><a href="#bisect-for-sorted-sequences" aria-label="bisect for sorted sequences permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>bisect</code> For Sorted Sequences</h2>
+<h3 id="searching-using-bisect" style="position:relative;"><a href="#searching-using-bisect" aria-label="searching using bisect permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Searching Using <code>bisect()</code></h3>
 <p>There are 2 bisect functions, <code>bisect_left</code> and <code>bisect_right</code>. By default, <code>bisect.bisect</code> is an alias for <code>bisect.bisect_right</code>. These functions are basically binary searches for sequences with generic ordered types. The difference between the two is subtle - when you try to search an object and the object itself is present in the sequence, <code>bisect_left</code> returns the element's index, and <code>bisect_right</code> returns the index plus one:</p>
 <pre><code class="language-python">>>> from bisect import bisect_right, bisect_left
 >>> l = [1,2,3]
@@ -179,7 +294,7 @@ TypeError: 'tuple' object does not support item assignment
 'Large'
 </code></pre>
 <p>Here, we use <code>bisect_right</code> because we would rather want the person to fit comfortably in a larger t-shirt in case their waist size was at the cutoff. If you want to look like you're bigger than you actually are(like me), then you would use <code>bisect_left</code>.</p>
-<h3>Inserting Using <code>insort()</code></h3>
+<h3 id="inserting-using-insort" style="position:relative;"><a href="#inserting-using-insort" aria-label="inserting using insort permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Inserting Using <code>insort()</code></h3>
 <p>We use <code>bisect.insort</code> to add an element into a sorted sequence:</p>
 <pre><code class="language-python">>>> import bisect
 >>> l = [1,3,5,7]
@@ -193,8 +308,8 @@ TypeError: 'tuple' object does not support item assignment
 [0, 1, 2, 3, 4, 5, 6, 7]
 </code></pre>
 <p><code>insort</code> has extra keyword arguments to insert in a sorted subsequence, and insort left or right like bisect. Once again, this can be applied to more than just lists. Any ordered collection will do, like <code>array</code>s!</p>
-<h1>Homogenous Array Types</h1>
-<h2><code>array</code></h2>
+<h1 id="homogenous-array-types" style="position:relative;"><a href="#homogenous-array-types" aria-label="homogenous array types permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Homogenous Array Types</h1>
+<h2 id="array" style="position:relative;"><a href="#array" aria-label="array permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>array</code></h2>
 <p><strong>Arrays are underrated and underused. They are so, so much faster than <code>list</code>s. <code>list</code>s are the default, but don't be lazy when you need the performance.</strong> <code>array</code>s contain the bit &#x26; byte level representation of primitive data types, and it's basically a C-style array. To create an array:</p>
 <pre><code class="language-python">>>> from array import array
 >>> import numpy as np
@@ -221,7 +336,7 @@ TypeError: 'tuple' object does not support item assignment
 -rw-r--r--  1 dev  staff  80 Jun 27 16:18 temp.bin
 </code></pre>
 <p>Nice. It's small and compact in binary format. <code>numpy</code> arrays do something similar. <code>bytes</code> and <code>bytearray</code> are simply specific types of <code>array</code> that will be discussed in detail later.</p>
-<h2><code>memoryview</code></h2>
+<h2 id="memoryview" style="position:relative;"><a href="#memoryview" aria-label="memoryview permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>memoryview</code></h2>
 <p><code>memoryview</code> is like a slice of an <code>array</code>. There is no copying, everything is referenced and is usually mutable. Here we change the content of the first double in an <code>array</code> by casting the memoryview to unsigned 8-bit ints, and modifying it:</p>
 <pre><code class="language-python">>>> from array import array
 >>> nums = array('d', [1,2,3])
@@ -234,8 +349,8 @@ TypeError: 'tuple' object does not support item assignment
 array('d', [1.0000000000000022, 2.0, 3.0])
 </code></pre>
 <p>Most of the time, you probably don't want to use this though.</p>
-<h1>Deques &#x26; Queues</h1>
-<h2><code>deque</code></h2>
+<h1 id="deques--queues" style="position:relative;"><a href="#deques--queues" aria-label="deques  queues permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deques &#x26; Queues</h1>
+<h2 id="deque" style="position:relative;"><a href="#deque" aria-label="deque permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>deque</code></h2>
 <p><code>collections</code> supplies with us a <code>deque</code> container which is heterogenous. It has the standard <code>append</code> and <code>pop</code> operations. On top of it, it has a couple cool functions like <code>rotate</code>, <code>extend</code> and <code>extendleft</code>.</p>
 <p><code>rotate()</code> takes in a single integer as argument, and rotates the deque in that direction. Why no <code>rotateleft</code> like <code>extend</code>? Because you can supply a negative number to rotate in the other direction. By default, <code>rotate(k)</code> moves the i-th element to the <code>(i+k) % N</code>-th place in the deque, where <code>N</code> is the size of the container.</p>
 <pre><code class="language-python">>>> from collections import deque
@@ -255,5 +370,5 @@ deque(['f', 'a', 'b', 'c'], maxlen=4)
 >>> dq
 deque(['e', 'f', 'g', 'f'], maxlen=4)
 </code></pre>
-<h2>Different Queues</h2>
-<p>There are a lot of different queue containers in python. You can technically use a <code>deque</code> as a queue itself too. However, for more complicated applications where asynchronicity is a key factor, insertion and popping from a queue may be tricky. Here, we use threadsafe <code>queue</code> library with its <code>Queue</code>, <code>LifoQueue</code> (which is literally a stack), and <code>PriorityQueue</code>. When you call <code>pop</code> on an empty default queue here, it will wait until an item has been inserted, rather than return an error message. <code>multiprocessing</code> and <code>asyncio</code> implements its own queues as well.</p></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/Python Fundemental";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-8d4b75a2d1f40b917928.js"],"app":["/app-38b5f03dc62c53366d39.js"],"component---src-pages-404-js":["/component---src-pages-404-js-29ed3715f54cf9c244c0.js"],"component---src-pages-about-js":["/component---src-pages-about-js-fd15a58ea15ae88b4493.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-7ede06bdb9f176a9f956.js"],"component---src-pages-index-js":["/component---src-pages-index-js-bbb566bacc1c2226a02a.js"],"component---src-pages-post-js":["/component---src-pages-post-js-3d51be85b4ac01d1b06a.js"],"component---src-pages-project-js":["/component---src-pages-project-js-98a9c34adfacd0a5a966.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-50e27a0549ea83cc010e.js"]};/*]]>*/</script><script src="/my-website/polyfill-8d4b75a2d1f40b917928.js" nomodule=""></script><script src="/my-website/component---src-templates-post-template-js-50e27a0549ea83cc010e.js" async=""></script><script src="/my-website/styles-407fe62976dc5310c43e.js" async=""></script><script src="/my-website/app-38b5f03dc62c53366d39.js" async=""></script><script src="/my-website/framework-6c3ead24af170cdcb87c.js" async=""></script><script src="/my-website/webpack-runtime-6e326d7625c6554f2fa6.js" async=""></script></body></html>
+<h2 id="different-queues" style="position:relative;"><a href="#different-queues" aria-label="different queues permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Different Queues</h2>
+<p>There are a lot of different queue containers in python. You can technically use a <code>deque</code> as a queue itself too. However, for more complicated applications where asynchronicity is a key factor, insertion and popping from a queue may be tricky. Here, we use threadsafe <code>queue</code> library with its <code>Queue</code>, <code>LifoQueue</code> (which is literally a stack), and <code>PriorityQueue</code>. When you call <code>pop</code> on an empty default queue here, it will wait until an item has been inserted, rather than return an error message. <code>multiprocessing</code> and <code>asyncio</code> implements its own queues as well.</p></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/Python Fundemental";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-8d4b75a2d1f40b917928.js"],"app":["/app-5405a11b6cddead427e8.js"],"component---src-pages-404-js":["/component---src-pages-404-js-29ed3715f54cf9c244c0.js"],"component---src-pages-about-js":["/component---src-pages-about-js-f81ae29edd68a762b6a1.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-7ede06bdb9f176a9f956.js"],"component---src-pages-index-js":["/component---src-pages-index-js-2fb609c5543b087b8e8d.js"],"component---src-pages-post-js":["/component---src-pages-post-js-fff750676227bc21e307.js"],"component---src-pages-project-js":["/component---src-pages-project-js-c1b9883230466593e481.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-a3433237fa12cc5ce65a.js"]};/*]]>*/</script><script src="/my-website/polyfill-8d4b75a2d1f40b917928.js" nomodule=""></script><script src="/my-website/component---src-templates-post-template-js-a3433237fa12cc5ce65a.js" async=""></script><script src="/my-website/styles-407fe62976dc5310c43e.js" async=""></script><script src="/my-website/app-5405a11b6cddead427e8.js" async=""></script><script src="/my-website/framework-6c3ead24af170cdcb87c.js" async=""></script><script src="/my-website/webpack-runtime-fef568e355a87cf74a2c.js" async=""></script></body></html>

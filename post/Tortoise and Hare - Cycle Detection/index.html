@@ -1,0 +1,157 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/my-website/styles.854eeceadf4a782aaa45.css" id="gatsby-global-css">html{background-color:#fff}blockquote{background-color:#f6f6f6;padding:1rem 2rem}body{font-family:roboto;margin:0}.noselect{-webkit-touch-callout:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.white-font{color:#f5f5f5}.nounderscore{text-decoration:none}.underscore{text-decoration:underline}h2,small{color:#000}.onHover:hover{text-decoration:underline}.container-module--container--1stMa{margin:3rem auto;max-width:650px;padding:0 1rem}</style><meta name="generator" content="Gatsby 2.32.3"/><style type="text/css">
+    .anchor-header.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor-header.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor-header svg,
+    h2 .anchor-header svg,
+    h3 .anchor-header svg,
+    h4 .anchor-header svg,
+    h5 .anchor-header svg,
+    h6 .anchor-header svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor-header svg,
+    h2:hover .anchor-header svg,
+    h3:hover .anchor-header svg,
+    h4:hover .anchor-header svg,
+    h5:hover .anchor-header svg,
+    h6:hover .anchor-header svg,
+    h1 .anchor-header:focus svg,
+    h2 .anchor-header:focus svg,
+    h3 .anchor-header:focus svg,
+    h4 .anchor-header:focus svg,
+    h5 .anchor-header:focus svg,
+    h6 .anchor-header:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link as="script" rel="preload" href="/my-website/webpack-runtime-fef568e355a87cf74a2c.js"/><link as="script" rel="preload" href="/my-website/framework-6c3ead24af170cdcb87c.js"/><link as="script" rel="preload" href="/my-website/app-5405a11b6cddead427e8.js"/><link as="script" rel="preload" href="/my-website/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/my-website/component---src-templates-post-template-js-a3433237fa12cc5ce65a.js"/><link as="fetch" rel="preload" href="/my-website/page-data\post\Tortoise and Hare - Cycle Detection\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/my-website/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header style="background:black;text-align:center"><div style="margin:0 auto;padding:1.45rem 1.0875rem;display:flex;justify-items:center;align-items:center"><h1 style="margin:0;flex:1"><a style="color:white;text-decoration:none" href="/my-website/">Kyuho Yi</a></h1><ul class="noselect nounderscore white-font" style="justify-content:center;display:flex;flex:1;list-style-type:none;font-family:roboto;font-size:1.5rem"><li style="display:inline-block;margin-right:2rem"><a class="noselect nounderscore white-font" href="/my-website/">Home</a></li><li style="display:inline-block;margin-right:2rem"><a class="noselect nounderscore white-font" href="/my-website/post/">Post</a></li><li style="display:inline-block;margin-right:2rem"><a class="noselect nounderscore white-font" href="/my-website/project/">Project</a></li><li style="display:inline-block;margin-right:2rem"><a class="noselect nounderscore white-font" href="/my-website/about/">About</a></li></ul></div></header><div class="container-module--container--1stMa"><h1>Floyd&#x27;s cycle-finding algorithm, Tortoise and Hare</h1><div><h1 id="table-of-contents" style="position:relative;"><a href="#table-of-contents" aria-label="table of contents permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table of Contents</h1>
+<p><ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li>
+<p><a href="#introduction">Introduction</a></p>
+<ul>
+<li><a href="#definition">Definition</a></li>
+</ul>
+</li>
+<li><a href="#problems">Problems</a></li>
+<li>
+<p><a href="#solution-for-linked-list-cycle-ii">Solution for Linked List Cycle II</a></p>
+<ul>
+<li><a href="#code-python3">Code (python3)</a></li>
+<li><a href="#explanation">Explanation</a></li>
+</ul>
+</li>
+</ul></p>
+<h1 id="introduction" style="position:relative;"><a href="#introduction" aria-label="introduction permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h1>
+<h2 id="definition" style="position:relative;"><a href="#definition" aria-label="definition permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Definition</h2>
+<p>In computer science, cycle detection or cycle finding is the algorithmic problem of finding a cycle in a sequence of iterated function values.</p>
+<p>For any function f that maps a finite set S to itself, and any initial value x0 in S, the sequence of iterated function values</p>
+<p>must eventually use the same value twice: there must be some pair of distinct indices i and j such that xi = xj. Once this happens, the sequence must continue periodically, by repeating the same sequence of values from xi to xj − 1. Cycle detection is the problem of finding i and j, given f and x0.</p>
+<p>Several algorithms for finding cycles quickly and with little memory are known. Robert W. Floyd's tortoise and hare algorithm moves two pointers at different speeds through the sequence of values until they both point to equal values. Alternatively, Brent's algorithm is based on the idea of exponential search. Both Floyd's and Brent's algorithms use only a constant number of memory cells, and take a number of function evaluations that is proportional to the distance from the start of the sequence to the first repetition. Several other algorithms trade off larger amounts of memory for fewer function evaluations.</p>
+<p>The applications of cycle detection include testing the quality of pseudorandom number generators and cryptographic hash functions, computational number theory algorithms, detection of infinite loops in computer programs and periodic configurations in cellular automata, automated shape analysis of linked list data structures, detection of deadlocks for transactions management in DBMS.</p>
+<p>The figure shows a function f that maps the set S = {0,1,2,3,4,5,6,7,8} to itself. If one starts from x0 = 2 and repeatedly applies f, one sees the sequence of values</p>
+<p>2, 0, 6, 3, 1, 6, 3, 1, 6, 3, 1, ....
+The cycle in this value sequence is 6, 3, 1.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Functional_graph.svg/330px-Functional_graph.svg.png" alt="alt text"></p>
+<h1 id="problems" style="position:relative;"><a href="#problems" aria-label="problems permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Problems</h1>
+<p>Floyd's cycle-detection algorithm is used to find a cycle in a sequence. There are variations to problems which you can solve using the concept of Floyd's cycle detection algorithm such as:</p>
+<ul>
+<li>Linked List Cycle <a href="https://leetcode.com/problems/linked-list-cycle/">https://leetcode.com/problems/linked-list-cycle/</a></li>
+<li>Linked List Cycle II <a href="https://leetcode.com/problems/linked-list-cycle-ii/">https://leetcode.com/problems/linked-list-cycle-ii/</a></li>
+</ul>
+<p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.</p>
+<p>There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.</p>
+<p>Example 1:</p>
+<p><img src="https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist.png" alt="alt text"></p>
+<blockquote>
+<p>Input: head = [3,2,0,-4], pos = 1</p>
+<p>Output: tail connects to node index 1</p>
+<p>Explanation: There is a cycle in the linked list, where tail connects to the second node</p>
+<p>Example 2:</p>
+</blockquote>
+<p><img src="https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist_test2.png" alt="alt text"></p>
+<blockquote>
+<p>Input: head = [1,2], pos = 0</p>
+<p>Output: tail connects to node index 0</p>
+<p>Explanation: There is a cycle in the linked list, where tail connects to the first node.</p>
+</blockquote>
+<h1 id="solution-for-linked-list-cycle-ii" style="position:relative;"><a href="#solution-for-linked-list-cycle-ii" aria-label="solution for linked list cycle ii permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solution for Linked List Cycle II</h1>
+<h2 id="code-python3" style="position:relative;"><a href="#code-python3" aria-label="code python3 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code (python3)</h2>
+<pre><code class="language-python"># Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+         self.next = None
+
+class Solution:
+    def detectCycle(self, head: ListNode) -> ListNode:
+
+        if head==None:
+            return None
+        tortoise=head
+        hare=head
+
+
+        while hare.next!=None and hare.next.next!=None:
+            hare=hare.next.next
+            tortoise=tortoise.next
+            if hare==tortoise:
+
+                metNode=tortoise
+                **P1**=head
+                **P2**=metNode
+                while **P1** != **P2**:
+                    **P1**=**P1**.next
+                    **P2**=**P2**.next
+
+                return **P1**
+
+
+        return None
+
+>>> a=ListNode(3)
+>>> b=ListNode(2)
+>>> c=ListNode(0)
+>>> d=ListNode(-4)
+>>> a.next=b
+>>> b.next=c
+>>> c.next=d
+>>> d.next=b
+>>> ans=Solution()
+>>> result=ans.detectCycle(a)
+>>> print(result.val)
+2
+</code></pre>
+<h2 id="explanation" style="position:relative;"><a href="#explanation" aria-label="explanation permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Explanation</h2>
+<p>The approach is simple. Let the hare and the tortoise race each other. The hare, which is the faster animal, can travel two times the speed of the tortoise through nodes and the tortoise travels to next node. When the input has a cycle, the hare will be running in circle endlessly in the cycle. Although the tortoise is slower than the hare, the tortoise will eventually meet the hare in one of the nodes of the cycle. Because the hare is traveling the cycle at two times the speed of the tortoise, the hare can catch the tortoise after circling the cycle once or more. We call this point intersection or meeting point <strong>I</strong>.</p>
+<hr>
+<p>So you can say a cycle exists if intersection <strong>I</strong>. How can you find out where the cycle begins?
+<strong>Use node at the intersection and node at the start of the linked list</strong></p>
+<p>Let intersection point node <strong>P1</strong> and head node <strong>P2</strong> travel from their positions to the their next node iterating until <strong>P1</strong> meet with <strong>P2</strong>. When the loop starts, return either <strong>P1</strong> or <strong>P2</strong> as the answer. The intersection point of <strong>P1</strong> and <strong>P2</strong> is the node where the cycle begins.</p>
+<hr>
+<p>The intersection point of <strong>P1</strong> and <strong>P2</strong> is the node where the cycle begins, but why?</p>
+<p>Let <strong>C</strong> be length of the cycle, <strong>L</strong> be the distance from head to the node where the cycle starts, and <strong>I</strong> be the point where the tortoise and the hare met. Let the tortoise travel <strong>L</strong> distance in the list(The tortoise is now at the node where the cycle begins) Since hare is traveling at two times the speed of the tortoise, you can say the hare has traveled <strong>2L</strong> distance if the tortoise has traveled to <strong>L</strong>. Out of the <strong>2L</strong> distance the hare has traveled, the hare has consumed <strong>L</strong> distance reaching the node where the cycle begins and <strong>L</strong> distance in the cycle which we can call <strong>x</strong>. The distance of <strong>x</strong> represents where the hare is in relative point of the node <strong>L</strong>. Since a cycle is a loop where the distance traveled can be reset to 0 if one makes a full cycle, we can represent x as <strong>x</strong> = <strong>L</strong> mod <strong>C</strong> for 0 &#x3C; x &#x3C; <strong>C</strong>. If 2L > L + C, <strong>x</strong> can be 0 if the hare and tortoise is on the same element when the tortoise reaches the node at <strong>L</strong>. Let <strong>P1</strong> and <strong>P2</strong> travels one step at a time <strong>l</strong> times. <strong>P2</strong> will be <strong>l</strong> steps ahead from the head and <strong>P1</strong> will be <strong>l mod C</strong> steps ahead of <strong>I</strong>. When <strong>P1</strong> and <strong>P2</strong> meet after <strong>l</strong> steps, <strong>l = l mod C</strong>.</p></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/Tortoise and Hare - Cycle Detection";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-8d4b75a2d1f40b917928.js"],"app":["/app-5405a11b6cddead427e8.js"],"component---src-pages-404-js":["/component---src-pages-404-js-29ed3715f54cf9c244c0.js"],"component---src-pages-about-js":["/component---src-pages-about-js-f81ae29edd68a762b6a1.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-7ede06bdb9f176a9f956.js"],"component---src-pages-index-js":["/component---src-pages-index-js-2fb609c5543b087b8e8d.js"],"component---src-pages-post-js":["/component---src-pages-post-js-fff750676227bc21e307.js"],"component---src-pages-project-js":["/component---src-pages-project-js-c1b9883230466593e481.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-a3433237fa12cc5ce65a.js"]};/*]]>*/</script><script src="/my-website/polyfill-8d4b75a2d1f40b917928.js" nomodule=""></script><script src="/my-website/component---src-templates-post-template-js-a3433237fa12cc5ce65a.js" async=""></script><script src="/my-website/styles-407fe62976dc5310c43e.js" async=""></script><script src="/my-website/app-5405a11b6cddead427e8.js" async=""></script><script src="/my-website/framework-6c3ead24af170cdcb87c.js" async=""></script><script src="/my-website/webpack-runtime-fef568e355a87cf74a2c.js" async=""></script></body></html>
