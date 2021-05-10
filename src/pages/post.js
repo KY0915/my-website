@@ -33,7 +33,12 @@ export default function Post({ data }) {
 
 export const pageQuery = graphql`
   query MyQuery {
-    blog: allMarkdownRemark {
+    blog: allMarkdownRemark(
+      sort: {
+              fields: [frontmatter___date]
+              order: DESC
+            }) 
+    {      
       posts: nodes {
         frontmatter {
           date(fromNow: true)

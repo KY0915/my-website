@@ -1,14 +1,14 @@
 ---
 title: Floyd's cycle-finding algorithm, Tortoise and Hare
-date: 2021-02-09
+date: 2021-03-10
 author: Kyuho Yi
 ---
 
-#Table of Contents
+# Table of Contents
 TOC
 
-#Introduction
-##Definition
+# Introduction
+## Definition
 In computer science, cycle detection or cycle finding is the algorithmic problem of finding a cycle in a sequence of iterated function values.
 
 For any function f that maps a finite set S to itself, and any initial value x0 in S, the sequence of iterated function values
@@ -26,7 +26,7 @@ The cycle in this value sequence is 6, 3, 1.
 
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Functional_graph.svg/330px-Functional_graph.svg.png)
 
-#Problems
+# Problems
 
 Floyd's cycle-detection algorithm is used to find a cycle in a sequence. There are variations to problems which you can solve using the concept of Floyd's cycle detection algorithm such as:
 
@@ -109,7 +109,7 @@ class Solution:
 2
 ```
 
-##Explanation
+## Explanation
 
 The approach is simple. Let the hare and the tortoise race each other. The hare, which is the faster animal, can travel two times the speed of the tortoise through nodes and the tortoise travels to next node. When the input has a cycle, the hare will be running in circle endlessly in the cycle. Although the tortoise is slower than the hare, the tortoise will eventually meet the hare in one of the nodes of the cycle. Because the hare is traveling the cycle at two times the speed of the tortoise, the hare can catch the tortoise after circling the cycle once or more. We call this point intersection or meeting point **I**.
 
